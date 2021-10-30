@@ -77,3 +77,7 @@ def remove_cupcake(cupcake_id):
     db.session.commit()
 
     return jsonify(message="Deleted") 
+
+@app.route('/')
+def cupcakeHTML():
+    return render_template('cupcakes.html')
